@@ -7,7 +7,7 @@
 
 # commit changes
 git add -A
-git commit -m "publish gh-pages" --allow-empty
+git commit -m "publish gh-pages branch" --allow-empty
 $commit_hash = git log -n 1 --format=%H HEAD
 
 # commit changes in dist to gh-pages
@@ -18,3 +18,5 @@ git --work-tree dist commit --allow-empty --amend -m "publish commit '$commit_ha
 # checkout master
 git symbolic-ref HEAD refs/heads/master
 git reset --hard
+
+git push -f origin gh-pages
