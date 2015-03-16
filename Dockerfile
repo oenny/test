@@ -1,8 +1,5 @@
-FROM dockerfile/nginx
-
-COPY docker /data/www/
-COPY nginx.conf /etc/nginx/sites-available/default
-
+FROM golang:latest
+ADD . /oenny
+RUN go install /oenny
+ENTRYPOINT /go/bin/golang-docker
 EXPOSE 80
-
-CMD ["nginx"]
