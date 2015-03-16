@@ -1,2 +1,2 @@
 # Test
-[Live demo]: http://oenny.github.io/test
+[Live demo](http://oenny.github.io/test)
